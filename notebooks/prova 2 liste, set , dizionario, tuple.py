@@ -50,3 +50,34 @@ print("Prima coordinata:", coordinate[0])
 nuove_coordinate = coordinate + (30.0,)
 print("Nuova tupla di coordinate:", nuove_coordinate)
 
+#fai esempi di ciclo con e senza indice per ogni struttura dati
+# Ciclo su una lista senza indice
+print("\nCiclo su una lista senza indice:")
+for frutto in frutti:
+    print(frutto)
+# Ciclo su una lista con indice
+print("\nCiclo su una lista con indice:")
+for i in range(len(frutti)):
+    print(f"Frutto {i}: {frutti[i]}")
+# Ciclo su un set senza indice
+print("\nCiclo su un set senza indice:")
+for numero in numeri:
+    print(numero)
+# Ciclo su un dizionario senza indice
+print("\nCiclo su un dizionario senza indice:")
+for chiave in persona:
+    print(f"{chiave}: {persona[chiave]}")
+# Ciclo su un dizionario con indice (usando enumerate)
+print("\nCiclo su un dizionario con indice:")
+for i, chiave in enumerate(persona):
+    print(f"{i}. {chiave}: {persona[chiave]}")
+# Ciclo su una tupla senza indice
+print("\nCiclo su una tupla senza indice:")
+for coordinata in coordinate:
+    print(coordinata)
+# Ciclo su una tupla con indice
+print("\nCiclo su una tupla con indice:")
+for i in range(len(coordinate)):
+    print(f"Coordinata {i}: {coordinate[i]}")   
+
+
