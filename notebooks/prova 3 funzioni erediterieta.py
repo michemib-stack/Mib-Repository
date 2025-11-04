@@ -62,8 +62,8 @@ print(tutore1.Livello())
 
 class Militare(Studente):
     pass
-    #def __init__(self, nome, cognome, corso_di_studi, listavoti):
-    #   super().__init__(nome, cognome, corso_di_studi, listavoti)
+    #def __init__(self, nome, cognome, corso_di_studi, listavoti): #qui posso aggiungere altri attributi
+    #   super().__init__(nome, cognome, corso_di_studi, listavoti) # richiamo il costruttore della classe base
   
 
     def GiorniPermesso(self):
@@ -87,3 +87,10 @@ print(f"Giorni di permesso: {militare2.GiorniPermesso()}")
 militare3 = Militare('Paolo', 'Bianchi', 'Comunicazioni', [30, 30, 30])
 print(f"\n{militare3.Dati()}")
 print(f"Giorni di permesso: {militare3.GiorniPermesso()}")
+
+import prova22
+
+import math
+print("\nValore di pi greco:", math.pi) 
+print("Radice quadrata di 16:", math.sqrt(16))
+
