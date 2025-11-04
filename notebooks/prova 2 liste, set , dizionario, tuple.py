@@ -11,3 +11,42 @@ print("Lista di frutti:", frutti)
 # Aggiunta di un elemento alla lista
 frutti.append('arancia')
 print("Lista dopo l'aggiunta di un frutto:", frutti)
+# Rimozione di un elemento dalla lista 
+frutti.remove('banana')
+print("Lista dopo la rimozione di un frutto:", frutti)
+# Accesso a un elemento della lista
+print("Primo frutto nella lista:", frutti[0])
+
+# Set
+numeri = {1, 2, 3, 4, 5}
+print("\nSet di numeri:", numeri)
+# Aggiunta di un elemento al set
+numeri.add(6)
+print("Set dopo l'aggiunta di un numero:", numeri)
+# Rimozione di un elemento dal set
+numeri.remove(3)
+print("Set dopo la rimozione di un numero:", numeri)
+# Verifica se un elemento è nel set
+print("Il numero 4 è nel set?", 4 in numeri)
+# Dizionario
+persona = {'nome': 'Alice', 'età': 30, 'città': 'Roma'}
+print("\nDizionario persona:", persona)
+# Aggiunta di una coppia chiave-valore al dizionario
+persona['professione'] = 'Ingegnere'
+print("Dizionario dopo l'aggiunta di una professione:", persona)
+# Rimozione di una coppia chiave-valore dal dizionario
+del persona['età']
+print("Dizionario dopo la rimozione dell'età:", persona)
+# Accesso a un valore tramite la chiave
+print("Nome della persona:", persona['nome'])   
+
+# Tupla 
+coordinate = (10.0, 20.0)
+print("\nTupla di coordinate:", coordinate)
+# Accesso a un elemento della tupla
+print("Prima coordinata:", coordinate[0])
+# Le tuple non possono essere modificate, quindi non possiamo aggiungere o rimuovere elementi   
+# Tuttavia, possiamo creare una nuova tupla basata su quella esistente
+nuove_coordinate = coordinate + (30.0,)
+print("Nuova tupla di coordinate:", nuove_coordinate)
+
