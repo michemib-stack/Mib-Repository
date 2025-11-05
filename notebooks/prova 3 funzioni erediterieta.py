@@ -94,3 +94,26 @@ import math
 print("\nValore di pi greco:", math.pi) 
 print("Radice quadrata di 16:", math.sqrt(16))
 
+max_val = max(10, 20, 5, 30)
+min_val = min(10, 20, 5, 30)
+print("Valore massimo:", max_val)
+print("Valore minimo:", min_val)  
+
+
+
+import datetime as dt
+
+x = dt.datetime.now()
+print("Data e ora attuali:", x)
+print(x.strftime("%b")) # Month as locale’s abbreviated name.
+print(x.strftime("%A")) # Weekday as locale’s full name.  
+print(x.strftime("%d")) # Day of the month as a zero-padded decimal number.
+print(x.strftime("%Y")) # Year with century as a decimal number.
+print(x.strftime("%H:%M:%S")) # Hour, Minute and Second
+print(x.strftime("%I:%M %p")) # Hour and Minute, 12-hour clock, AM or PM
+print(x.strftime("%c")) # Locale’s appropriate date and time representation.
+print(x.strftime("%x")) # Locale’s appropriate date representation.
+print(x.strftime("%X")) # Locale’s appropriate time representation.
+#parametro per il formato Giuliano?
+print(x.strftime("%j")) # Day of the year as a zero-padded decimal number.
+
