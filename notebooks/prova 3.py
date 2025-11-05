@@ -88,3 +88,21 @@ print(f"Giorni di permesso: {militare2.GiorniPermesso()}")
 militare3 = Militare('Paolo', 'Bianchi', 'Comunicazioni', [30, 30, 30])
 print(f"\n{militare3.Dati()}")
 print(f"Giorni di permesso: {militare3.GiorniPermesso()}")
+
+x=5
+y=5
+
+x= input("inserisci un numero: ")
+y= input("inserisci un altro numero: ") 
+x= int(x)
+y= int(y) 
+
+try:
+  z= x/y
+except: # ZeroDivisionError:
+    z= 'divisione per zero non permessa'  
+    print(z) 
+else:
+    print(z, int(z))  
+
+print(type(z))
