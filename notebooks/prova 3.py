@@ -1,0 +1,90 @@
+class Studente:
+  def __init__(self, nome, cognome, corso_di_studi, listavoti):  #metodo init, iniziale
+    self.nome = nome
+    self.cognome = cognome
+    self.corso_di_studi = corso_di_studi
+    self.listavoti = listavoti
+
+  def Dati(self):                             # metodi creati da me
+    return 'Nome:' + self.nome + '\n' + \
+           'Cognome:' + self.cognome + '\n' + \
+           'Corso di studi:' + self.corso_di_studi + '\n' + \
+           'lista voti:' + str(self.listavoti)
+
+  def Media(self):
+    #return 'Media voti: ' + str(sum(self.listavoti)/len(self.listavoti))
+    return sum(self.listavoti)/len(self.listavoti)
+
+studente1 = Studente('Mario', 'Rossi','Ingegneria',[30,18,23])
+studente2 = Studente('Pippo', 'Baudo','ScienzePol',[19,18,21])
+
+print(studente1)
+print(studente2)
+
+
+#del studente1.nome
+
+
+print()
+print(studente1.Dati())
+
+studente1.corso_di_studi = 'Matematica'  # aggiorno istanza
+print('ristampo dopo aver cambiato corso')
+print(studente1.Dati())
+
+print(studente1.Media())
+print()
+print(studente2.Dati())
+print(studente2.Media())
+
+print(type(studente1))
+print(type(studente1.Media()))
+
+print(Studente.Dati(studente1))
+f"Media voti: {studente1.Media()}"
+
+class Tutore(Studente):   # definisco una classe Tutore  che eredita struttura e attributi della classe studente
+  pass
+
+  def Livello(self):                             # metodi creati da me
+      return 'Turore in materie di :' + self.corso_di_studi + '\n'
+
+
+tutore1 = Tutore('Gino', 'Vanelli','Teologia',[20,18,23])
+
+print(tutore1.Livello())
+
+#print(studente1.Livello())
+
+# definisci una classe militare che eredida da studente, e in piu ha gli attributi di giorni di permesso, che calcola i gg di permesso
+# in base alla media se sueriore a 20 allora 2 g se minore 1g se maggiore di 30 allora 3g
+
+
+class Militare(Studente):
+    pass
+    #def __init__(self, nome, cognome, corso_di_studi, listavoti):
+    #   super().__init__(nome, cognome, corso_di_studi, listavoti)
+  
+
+    def GiorniPermesso(self):
+        #media = sum(self.listavoti) / len(self.listavoti)
+        media = self.Media() # Corrected to call the instance method Media()
+        if media > 30:
+            return 3
+        elif media > 20:
+            return 2
+        else:
+            return 1
+
+militare1 = Militare('Luca', 'Verdi', 'Fanfara', [25, 28, 26])
+print(f"{militare1.Dati()}")
+print(f"Giorni di permesso: {militare1.GiorniPermesso()}")
+
+militare2 = Militare('Anna', 'Neri', 'Logistica', [18, 20, 19])
+print(f"\n{militare2.Dati()}")
+print(f"Giorni di permesso: {militare2.GiorniPermesso()}")
+
+
+militare3 = Militare('Paolo', 'Bianchi', 'Comunicazioni', [30, 30, 30])
+print(f"\n{militare3.Dati()}")
+print(f"Giorni di permesso: {militare3.GiorniPermesso()}")
